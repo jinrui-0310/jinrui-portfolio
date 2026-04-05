@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ data.personal.headline }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="lang-zh">
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="container nav-shell">
+                <a class="brand" href="/zh">
+                    <span class="brand-mark">JL</span>
+                    <span class="brand-text">
+                        <strong>{{ data.personal.preferred_name }}</strong>
+                        <small>中文作品集</small>
+                    </span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="site-nav">
+                    <a href="/zh#home">首页</a>
+                    <a href="/zh#about">关于我</a>
+                    <a href="/zh#experience">经历</a>
+                    <a href="/zh/projects">项目</a>
+                    <a href="/zh#skills">技能</a>
+                    <a href="/zh#education">教育</a>
+                    <a href="/zh#contact">联系</a>
+                    <a class="lang-switch" href="/">English</a>
+                </nav>
+            </div>
+        </header>
+        <main>{% block content %}{% endblock %}</main>
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <h3>{{ data.personal.preferred_name }}</h3>
+                    <p>{{ data.personal.headline }}</p>
+                </div>
+                <div class="footer-links">
+                    <a href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:{{ data.personal.email }}">{{ data.personal.email }}</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
