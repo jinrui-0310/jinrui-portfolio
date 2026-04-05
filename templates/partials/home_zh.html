@@ -1,15 +1,17 @@
 <section class="hero-section" id="home">
     <div class="container hero-grid">
         <div class="hero-copy reveal">
-            <div class="hero-name-wrap">
+            <div class="hero-header-row">
+                <div class="hero-name-wrap">
                 <h1>{{ data.personal.preferred_name }}</h1>
-            </div>
-            <div class="hero-meta-row">
+                </div>
+                <div class="hero-meta-row">
                 <img class="hero-photo" src="{{ url_for('static', filename='images/profile.jpg') }}" alt="{{ data.personal.preferred_name }} profile photo">
                 <a class="hero-linkedin-badge" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
                     <span class="profile-badge">in</span>
                 </a>
                 <p class="hero-section-label">关于我</p>
+                </div>
             </div>
             <p class="hero-text">求职方向：数据分析、商业分析、供应链分析</p>
             <h2 class="hero-about-title">{{ data.about.title }}</h2>

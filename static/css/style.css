@@ -222,11 +222,18 @@ img {
     width: fit-content;
 }
 
+.hero-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
 .hero-meta-row {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-top: 1rem;
     flex-wrap: wrap;
 }
 
@@ -1098,6 +1105,10 @@ img {
     }
 
     .hero-meta-row {
+        align-items: center;
+    }
+
+    .hero-header-row {
         align-items: center;
     }
 
