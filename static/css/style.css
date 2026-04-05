@@ -200,18 +200,21 @@ img {
 
 .hero-copy .hero-text {
     margin-top: 0.9rem;
+    color: #7b8794;
+    font-size: 0.95rem;
 }
 
 .hero-name-wrap {
     position: relative;
     display: inline-block;
     width: fit-content;
+    padding-right: 3rem;
 }
 
 .hero-linkedin-badge {
     position: absolute;
-    right: -18px;
-    bottom: 10px;
+    right: 0;
+    bottom: 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -235,10 +238,20 @@ img {
 
 .hero-summary {
     max-width: 54ch;
-    margin: 1rem 0 0;
+    margin: 0.7rem 0 0;
     color: var(--text-soft);
     font-size: 1.02rem;
     line-height: 1.8;
+}
+
+.hero-about-title {
+    margin: 1.15rem 0 0;
+    max-width: 24ch;
+    color: var(--heading);
+    font-size: 1.4rem;
+    line-height: 1.45;
+    font-weight: 600;
+    font-family: "Instrument Sans", "Noto Sans SC", sans-serif;
 }
 
 .eyebrow {
@@ -1013,7 +1026,7 @@ img {
     }
 
     .hero-linkedin-badge {
-        right: -10px;
+        right: 0;
         bottom: 6px;
     }
 
