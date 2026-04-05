@@ -941,7 +941,8 @@ img {
 
 .contact-panel {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
+    padding: 1.6rem 1.75rem;
 }
 
 .contact-label {
@@ -958,8 +959,11 @@ img {
 }
 
 #contact h2 {
-    font-size: 1.65rem;
-    line-height: 1.55;
+    max-width: 42ch;
+    margin: 0;
+    font-size: 1.22rem;
+    line-height: 1.75;
+    font-weight: 400;
 }
 
 .contact-details span {
