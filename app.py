@@ -358,6 +358,7 @@ CHINESE = {
         "相关能力": ["关系建模", "JOIN 与窗口函数", "KPI 报表分析", "跨部门数据协作", "数据洞察输出"],
     },
     "certificates": [
+        {"title_zh": "Azure 入门", "title_en": "Introduction to Azure", "url": "/static/files/certificates/Introduction to Azure.pdf", "image_url": "/static/images/certificates/Introduction to Azure.pdf.png"},
         {"title_zh": "中级 SQL", "title_en": "Intermediate SQL", "url": "/static/files/certificates/certificate1.pdf", "image_url": "/static/images/certificates/certificate1.pdf.png"},
         {"title_zh": "SQL 数据连接", "title_en": "Joining Data in SQL", "url": "/static/files/certificates/certificate2.pdf", "image_url": "/static/images/certificates/certificate2.pdf.png"},
         {"title_zh": "Seaborn 数据可视化入门", "title_en": "Introduction to Data Visualization with Seaborn", "url": "/static/files/certificates/certificate3.pdf", "image_url": "/static/images/certificates/certificate3.pdf.png"},
