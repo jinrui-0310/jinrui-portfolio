@@ -118,6 +118,66 @@ def build_sales_channel():
     return fig
 
 
+def build_procurement_overview_trend():
+    months = ["2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06"]
+    sourcing_attainment = [82, 85, 87, 89, 91, 93]
+    on_time_sourcing = [78, 80, 83, 84, 86, 88]
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=months, y=sourcing_attainment, mode="lines+markers", name="Sourcing Attainment Rate", line={"color": "#1f4f7a", "width": 3}))
+    fig.add_trace(go.Scatter(x=months, y=on_time_sourcing, mode="lines+markers", name="On-Time Sourcing Rate", line={"color": "#7c8ea3", "width": 3}))
+    fig.update_layout(
+        title="Monthly Sourcing Progress Overview",
+        template="plotly_white",
+        margin={"l": 40, "r": 20, "t": 60, "b": 40},
+        yaxis_title="Rate (%)",
+        xaxis_title="Year-Month",
+        legend={"orientation": "h", "y": 1.12},
+    )
+    return fig
+
+
+def build_procurement_program_attainment():
+    programs = ["P01", "P02", "P03", "P04", "P05"]
+    attainment = [94, 91, 88, 85, 82]
+    fig = go.Figure(go.Bar(x=programs, y=attainment, marker_color="#1f4f7a"))
+    fig.update_layout(
+        title="Sourcing Attainment by Program",
+        template="plotly_white",
+        margin={"l": 40, "r": 20, "t": 60, "b": 40},
+        yaxis_title="Attainment Rate (%)",
+        xaxis_title="Program ID",
+    )
+    return fig
+
+
+def build_supplier_claims():
+    suppliers = ["Supplier A", "Supplier B", "Supplier C", "Supplier D", "Supplier E"]
+    claims = [125, 110, 92, 76, 63]
+    fig = go.Figure(go.Bar(x=suppliers, y=claims, marker_color="#4f6b88"))
+    fig.update_layout(
+        title="Claim Amount by Supplier",
+        template="plotly_white",
+        margin={"l": 40, "r": 20, "t": 60, "b": 40},
+        yaxis_title="Claim Amount (K RMB)",
+        xaxis_title="Supplier",
+    )
+    return fig
+
+
+def build_supplier_category_claims():
+    categories = ["Battery", "Interior", "Electronics", "Body", "Chassis"]
+    claims = [138, 112, 96, 78, 61]
+    fig = go.Figure(go.Bar(x=categories, y=claims, marker_color="#7c8ea3"))
+    fig.update_layout(
+        title="Claim Amount by Part Category",
+        template="plotly_white",
+        margin={"l": 40, "r": 20, "t": 60, "b": 40},
+        yaxis_title="Claim Amount (K RMB)",
+        xaxis_title="Part Category",
+    )
+    return fig
+
+
 ENGLISH = {
     "personal": {
         "name": "Jinrui Li",
@@ -268,6 +328,13 @@ CHINESE = {
         ],
     },
     "projects": [
+        {
+            "title": "电动车采购与供应商绩效 Power BI 仪表板",
+            "time": "Power BI 项目",
+            "summary": "围绕采购执行、降本达成与供应商绩效搭建双页 Power BI 仪表板，支持管理层总览与供应商明细分析。",
+            "tags": ["Power BI", "采购分析", "供应商绩效"],
+            "url": "/zh/projects/ev-procurement-powerbi",
+        },
         {
             "title": "收入预测：支持规划与决策分析",
             "time": "2025年2月 - 2025年4月",
@@ -421,6 +488,34 @@ SALES_PROJECT_ZH = {
 }
 
 
+PROCUREMENT_POWERBI_PROJECT_ZH = {
+    "title": "电动车采购与供应商绩效 Power BI 仪表板",
+    "time": "Power BI 项目",
+    "tags": ["Power BI", "采购分析", "供应商绩效", "Dashboard"],
+    "overview": "基于 Power BI 搭建采购经营分析仪表板，围绕采购执行、进度达成、降本结果与供应商绩效，形成面向管理层总览和明细追踪的双页分析视图。",
+    "business_problem": "采购管理既需要总览关键 KPI，也需要快速下钻到供应商、零件类别和项目维度。这个项目的目标是把分散的采购与供应商绩效数据统一到一套可筛选、可下钻、可复盘的管理驾驶舱里，支撑采购进度管理、降本复盘与供应商风险识别。",
+    "tech_stack": ["Power BI", "Power Query", "DAX", "数据建模", "采购分析", "供应商绩效管理"],
+    "methods": [
+        "从 PBIX 中可识别出两页核心分析结构：Executive Overview 与 Supplier Performance & Detail，分别面向经营总览和供应商明细分析。",
+        "围绕 program、part category、supplier tier、risk level、year_month 等字段建立筛选逻辑，支持跨项目、零件类别和供应商分层分析。",
+        "在总览页中配置 Sourcing Attainment Rate、On-Time Sourcing Rate、Cost Achievement Rate 与 annual saving amount 等关键指标卡片和趋势图。",
+        "在供应商页中配置 Avg On-Time Delivery Rate、Total Quality Complaints、Total Claim Amount、Avg Cross-Functional Score 等指标，并结合供应商和品类维度的图表与明细表实现问题定位。",
+    ],
+    "results": [
+        "把采购执行、进度达成、降本结果和供应商质量风险整合进一套统一仪表板，降低管理层获取信息的时间成本。",
+        "支持从管理层总览快速下钻到 supplier_name、risk_level、part_category 等维度，便于定位高索赔与高风险对象。",
+        "体现了 Power BI 在 KPI 管理、交互式筛选、经营复盘和供应商绩效监控中的落地能力。",
+    ],
+    "detail_intro": "以下图表依据 PBIX 中识别出的页面结构与字段关系重建，用来展示该 Power BI 项目的核心分析逻辑。",
+    "charts": [
+        {"id": "procurement-zh-1", "title": "采购执行进度趋势", "description": "对应 Executive Overview 页的月度进度趋势，展示 Sourcing Attainment Rate 与 On-Time Sourcing Rate。", "graph_json": serialize_chart(build_procurement_overview_trend())},
+        {"id": "procurement-zh-2", "title": "项目维度采购达成率", "description": "对应按 program_id 查看采购执行结果的柱状图，用于比较不同项目的采购达成表现。", "graph_json": serialize_chart(build_procurement_program_attainment())},
+        {"id": "procurement-zh-3", "title": "供应商索赔金额分析", "description": "对应 Supplier Performance & Detail 页中的 supplier_name 与 part_category 视角，帮助识别高索赔供应商和高风险零件类别。", "graph_json": serialize_chart(build_supplier_claims())},
+        {"id": "procurement-zh-4", "title": "零件类别索赔金额分析", "description": "基于 part_category 聚合索赔金额，支持对问题集中的零件类别进行优先排查。", "graph_json": serialize_chart(build_supplier_category_claims())},
+    ],
+}
+
+
 @app.route("/")
 @app.route("/en")
 def home_en():
@@ -460,6 +555,11 @@ def project_tax_zh():
 @app.route("/zh/projects/sales-analytics")
 def project_sales_zh():
     return render_template("project_sales_analytics_zh.html", page_title="促销需求分析项目 | 李今锐", data=CHINESE, project=SALES_PROJECT_ZH)
+
+
+@app.route("/zh/projects/ev-procurement-powerbi")
+def project_procurement_powerbi_zh():
+    return render_template("project_procurement_powerbi_zh.html", page_title="采购与供应商绩效 Power BI 项目 | 李今锐", data=CHINESE, project=PROCUREMENT_POWERBI_PROJECT_ZH)
 
 
 if __name__ == "__main__":
