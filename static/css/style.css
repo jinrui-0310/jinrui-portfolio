@@ -627,6 +627,40 @@ img {
     font-size: 0.94rem;
 }
 
+.section-action {
+    margin-top: 1.25rem;
+}
+
+.project-list-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.2rem 0;
+    color: var(--heading);
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.project-list-link:hover,
+.project-list-link:focus-visible {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.project-list-arrow {
+    color: var(--text-soft);
+    font-size: 1rem;
+    transition: transform var(--transition), color var(--transition);
+}
+
+.project-list-link:hover .project-list-arrow,
+.project-list-link:focus-visible .project-list-arrow {
+    color: var(--primary);
+    transform: translateX(3px);
+}
+
 .detail-grid {
     grid-template-columns: minmax(0, 1fr) 320px;
     align-items: start;
