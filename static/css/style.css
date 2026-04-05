@@ -426,6 +426,12 @@ img {
 #experience .section-heading .eyebrow,
 #projects .section-heading .eyebrow,
 #skills .section-heading .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface);
     font-size: 1rem;
     color: var(--heading);
     letter-spacing: 0.04em;
