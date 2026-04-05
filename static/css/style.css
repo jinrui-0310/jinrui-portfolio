@@ -955,6 +955,11 @@ img {
     letter-spacing: 0.04em;
 }
 
+#contact h2 {
+    font-size: 1.65rem;
+    line-height: 1.55;
+}
+
 .contact-details span {
     padding: 0.35rem 0;
 }
