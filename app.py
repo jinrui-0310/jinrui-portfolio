@@ -215,19 +215,21 @@ ENGLISH = {
 CHINESE = {
     "personal": {
         "name": "李今锐",
-        "preferred_name": "李今锐 / Jeri Li",
-        "headline": "数据分析 | 商业智能 | 预测分析 | 供应链分析",
-        "location": "美国得州 College Station",
+        "preferred_name": "李今锐",
+        "headline": "数据分析 | 商业分析 | 供应链分析",
+        "location": "美国德州 College Station",
         "phone": "+86 18571523696",
+        "wechat": "18571523696",
+        "wechat_note": "因时差问题，请优先通过微信联系",
         "email": "jinrui@tamu.edu",
         "linkedin": "https://www.linkedin.com/in/jinrui-li-3a9924394",
         "github": "https://github.com/jinrui-0310",
         "resume_url": "/static/files/Jinrui_Li_Resume.pdf",
     },
     "hero": {
-        "eyebrow": "求职方向：数据分析、商业智能、预测分析、供应链分析",
+        "eyebrow": "求职方向：数据分析、商业分析、供应链分析",
         "title": "把复杂业务数据转化为可执行的业务决策。",
-        "intro": "德州农工大学计量经济学硕士在读，具有采购分析、供应链数据建模、Dashboard 报告和预测分析经验，关注数据分析、商业智能、预测与运营分析岗位。",
+        "intro": "美国 Texas A&M University 经济学硕士在读，具备国际化学习背景和中英文双语沟通能力。研究生阶段系统接受数据分析、经济预测、回归分析与数据库工具训练，能够完成数据处理、建模分析、趋势预测和业务洞察输出。结合近3年企业数据分析相关经验，能够较快理解业务场景并支持数据驱动决策。",
         "helper": "当前 Resume 按钮已经连接到项目里的 PDF 简历文件，后续你也可以替换成线上链接。",
         "stats": [
             {"value": "¥800K+", "label": "支持实现成本节约"},
@@ -240,7 +242,7 @@ CHINESE = {
         "title": "兼具业务理解与分析能力，聚焦供应链和经营决策场景。",
         "body": "我目前就读于德州农工大学计量经济学硕士项目，本科毕业于武汉理工大学物流管理专业。在岚图汽车工作期间，我参与了采购分析、供应链数据建模、成本分析、交付表现监控与仪表板搭建。我擅长将业务问题转化为数据问题，再使用 Python、SQL、R、SAS、Power BI 和 Excel 形成可落地的分析结果。目前重点关注数据分析、商业智能、预测分析，以及供应链和采购分析相关岗位。",
         "info": [
-            {"label": "所在地", "value": "College Station, TX"},
+            {"label": "所在地", "value": "美国德州 College Station"},
             {"label": "邮箱", "value": "jinrui@tamu.edu"},
             {"label": "电话", "value": "+86 18571523696"},
             {"label": "方向", "value": "计量经济学 + 应用数据分析"},
