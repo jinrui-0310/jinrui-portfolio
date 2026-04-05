@@ -412,14 +412,20 @@ img {
 }
 
 #about .section-heading .eyebrow,
-#education .section-heading .eyebrow {
+#education .section-heading .eyebrow,
+#experience .section-heading .eyebrow,
+#projects .section-heading .eyebrow,
+#skills .section-heading .eyebrow {
     font-size: 1rem;
     letter-spacing: 0.08em;
     margin-bottom: 0.75rem;
 }
 
 #about .section-heading h2,
-#education .section-heading h2 {
+#education .section-heading h2,
+#experience .section-heading h2,
+#projects .section-heading h2,
+#skills .section-heading h2 {
     font-size: 1.35rem;
     line-height: 1.45;
     font-weight: 600;
