@@ -394,12 +394,14 @@ img {
 
 .basic-info-row span {
     color: var(--text-soft);
+    font-weight: 700;
+    color: var(--heading);
 }
 
 .basic-info-row strong {
     color: var(--heading);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .basic-info-note strong {
