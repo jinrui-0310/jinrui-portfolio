@@ -253,6 +253,7 @@ CHINESE = {
         "items": [
             {
                 "company": "岚图汽车科技股份有限公司",
+                "company_url": "https://www.voyah.com.cn",
                 "title": "采购数据分析师",
                 "dates": "2021年7月 - 2024年3月",
                 "location": "中国武汉",
