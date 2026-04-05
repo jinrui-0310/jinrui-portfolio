@@ -942,6 +942,14 @@ img {
 .contact-panel {
     display: grid;
     gap: 1rem;
+    align-items: center;
+}
+
+.contact-panel > div:first-child {
+    display: grid;
+    gap: 1rem;
+    align-content: center;
+    min-height: 180px;
 }
 
 .contact-label {
@@ -958,8 +966,9 @@ img {
 }
 
 #contact h2 {
-    font-size: 1.65rem;
-    line-height: 1.55;
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.6;
 }
 
 .contact-details span {
