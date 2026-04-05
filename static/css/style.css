@@ -230,18 +230,17 @@ img {
     flex-wrap: wrap;
 }
 
-.hero-photo-placeholder {
-    width: 66px;
-    height: 66px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.hero-photo {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 999px;
-    border: 1px solid var(--line-strong);
-    background: linear-gradient(180deg, #f5f8fb, #edf2f7);
-    color: var(--text-soft);
-    font-size: 0.88rem;
-    font-weight: 600;
+    border: 2px solid #fff;
+    box-shadow:
+        0 0 0 1px var(--line-strong),
+        0 10px 20px rgba(15, 23, 42, 0.08);
+    background: var(--surface-muted);
 }
 
 .hero-linkedin-badge {
