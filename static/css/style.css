@@ -425,9 +425,17 @@ img {
 .stat-grid,
 .projects-grid,
 .skills-grid,
-.education-grid,
-.certificate-grid {
+.education-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.certificate-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 220px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.45rem;
+    scroll-snap-type: x proximity;
 }
 
 .stat-card {
@@ -490,7 +498,8 @@ img {
 #education .section-heading .eyebrow,
 #experience .section-heading .eyebrow,
 #projects .section-heading .eyebrow,
-#skills .section-heading .eyebrow {
+#skills .section-heading .eyebrow,
+#certificates .section-heading .eyebrow {
     display: inline-flex;
     align-items: center;
     padding: 0.4rem 0.8rem;
@@ -507,7 +516,8 @@ img {
 #education .section-heading h2,
 #experience .section-heading h2,
 #projects .section-heading h2,
-#skills .section-heading h2 {
+#skills .section-heading h2,
+#certificates .section-heading h2 {
     font-size: 1.2rem;
     line-height: 1.5;
     font-weight: 600;
@@ -657,6 +667,7 @@ img {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .certificate-preview {
@@ -667,24 +678,25 @@ img {
 
 .certificate-preview img {
     width: 100%;
-    aspect-ratio: 1.4 / 1;
+    aspect-ratio: 1.55 / 1;
     object-fit: cover;
 }
 
 .certificate-copy {
-    padding: 1rem 1.05rem 1.1rem;
+    padding: 0.8rem 0.9rem 0.9rem;
 }
 
 .certificate-card h3 {
     margin: 0 0 0.25rem;
     color: var(--heading);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .certificate-card p {
     margin: 0 0 0.8rem;
     color: var(--text-soft);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
 }
 
 .certificate-link {
