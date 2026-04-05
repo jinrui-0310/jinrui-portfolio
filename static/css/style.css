@@ -518,6 +518,33 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.education-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.education-row + .education-row {
+    margin-top: 0.5rem;
+}
+
+.education-meta {
+    margin: 0;
+    color: var(--text-soft);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.education-card .degree {
+    margin: 0;
+    color: var(--heading);
+}
+
+.education-card .education-details {
+    margin: 0.7rem 0 0;
+}
+
 .gpa {
     display: inline-flex;
     margin-top: 0.75rem;
@@ -675,11 +702,13 @@ img {
     }
 
     .timeline-header,
-    .project-topline {
+    .project-topline,
+    .education-row {
         flex-direction: column;
     }
 
-    .timeline-meta {
+    .timeline-meta,
+    .education-meta {
         text-align: left;
     }
 }
