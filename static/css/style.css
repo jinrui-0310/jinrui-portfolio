@@ -415,6 +415,7 @@ img {
 .projects-grid,
 .skills-grid,
 .education-grid,
+.certificate-grid,
 .chart-grid,
 .info-grid {
     display: grid;
@@ -424,7 +425,8 @@ img {
 .stat-grid,
 .projects-grid,
 .skills-grid,
-.education-grid {
+.education-grid,
+.certificate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -625,6 +627,7 @@ img {
 .project-card,
 .skill-card,
 .education-card,
+.certificate-card,
 .chart-card,
 .timeline-card,
 .contact-panel {
@@ -634,6 +637,7 @@ img {
 .project-card:hover,
 .skill-card:hover,
 .education-card:hover,
+.certificate-card:hover,
 .chart-card:hover,
 .timeline-card:hover,
 .contact-panel:hover {
@@ -645,6 +649,34 @@ img {
     margin-bottom: 0.9rem;
     color: var(--text-soft);
     font-size: 0.94rem;
+}
+
+.certificate-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    padding: 1.2rem 1.25rem;
+}
+
+.certificate-card h3 {
+    margin: 0 0 0.9rem;
+    color: var(--heading);
+    font-size: 1rem;
+}
+
+.certificate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--primary);
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.certificate-link:hover,
+.certificate-link:focus-visible {
+    text-decoration: underline;
 }
 
 .section-action {

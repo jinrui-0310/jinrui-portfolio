@@ -357,6 +357,13 @@ CHINESE = {
         "数据库 / 系统": ["PostgreSQL", "Docker", "Git", "Linux（bash）"],
         "相关能力": ["关系建模", "JOIN 与窗口函数", "KPI 报表分析", "跨部门数据协作", "数据洞察输出"],
     },
+    "certificates": [
+        {"title": "certificate1.pdf", "url": "/static/files/certificates/certificate1.pdf"},
+        {"title": "certificate2.pdf", "url": "/static/files/certificates/certificate2.pdf"},
+        {"title": "certificate3.pdf", "url": "/static/files/certificates/certificate3.pdf"},
+        {"title": "certificate4.pdf", "url": "/static/files/certificates/certificate4.pdf"},
+        {"title": "certificate5.pdf", "url": "/static/files/certificates/certificate5.pdf"},
+    ],
     "education": [
         {
             "school": "德州农工大学",
