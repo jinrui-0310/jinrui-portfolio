@@ -448,6 +448,25 @@ img {
     font-weight: 600;
 }
 
+.section-heading-line {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.section-heading-line .eyebrow {
+    margin-bottom: 0;
+}
+
+.section-subtitle {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 .section-intro {
     color: var(--text-soft);
     max-width: 62ch;
@@ -705,7 +724,8 @@ img {
 
     .timeline-header,
     .project-topline,
-    .education-row {
+    .education-row,
+    .section-heading-line {
         flex-direction: column;
     }
 
