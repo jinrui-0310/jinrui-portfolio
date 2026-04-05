@@ -770,6 +770,26 @@ img {
     transform: translateX(3px);
 }
 
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: #fbfcfd;
+}
+
 .dashboard-hero .project-hero-inner,
 .dashboard-kpi-card,
 .dashboard-page-card,
