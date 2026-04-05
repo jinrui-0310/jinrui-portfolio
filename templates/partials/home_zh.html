@@ -3,34 +3,36 @@
         <div class="hero-copy reveal">
             <p class="eyebrow">{{ data.hero.eyebrow }}</p>
             <h1>{{ data.personal.preferred_name }}</h1>
-            <h2>{{ data.hero.title }}</h2>
-            <p class="hero-text">{{ data.hero.intro }}</p>
             <div class="tag-list">
                 {% for item in data.personal.headline.split(' | ') %}
                 <span>{{ item }}</span>
                 {% endfor %}
             </div>
-            <div class="button-row">
-                <a class="button button-primary" href="{{ data.personal.resume_url }}" target="_blank" rel="noopener noreferrer">查看简历</a>
-                <a class="button button-secondary" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="button button-secondary" href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="button button-ghost" href="/zh#contact">联系我</a>
-            </div>
-            <p class="helper-text">{{ data.hero.helper }}</p>
         </div>
         <div class="hero-panel reveal delay-1">
-            <div class="stat-card">
-                <span class="stat-label">{{ data.personal.headline }}</span>
-                <strong>{{ data.personal.location }}</strong>
+            <div class="basic-info-card">
+                <div class="basic-info-row">
+                    <span>求职方向</span>
+                    <strong>数据分析 / 商业分析 / 供应链分析</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span>所在地</span>
+                    <strong>{{ data.personal.location }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span>邮箱</span>
+                    <strong>{{ data.personal.email }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span>电话</span>
+                    <strong>{{ data.personal.phone }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span>微信</span>
+                    <strong>{{ data.personal.wechat }}</strong>
+                </div>
             </div>
-            <div class="stat-grid">
-                {% for stat in data.hero.stats %}
-                <article class="stat-card">
-                    <span class="stat-value">{{ stat.value }}</span>
-                    <span class="stat-label">{{ stat.label }}</span>
-                </article>
-                {% endfor %}
-            </div>
+            <p class="helper-text">{{ data.personal.wechat_note }}</p>
         </div>
     </div>
 </section>

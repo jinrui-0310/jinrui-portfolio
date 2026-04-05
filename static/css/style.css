@@ -302,6 +302,37 @@ img {
     box-shadow: var(--shadow);
 }
 
+.basic-info-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.basic-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid rgba(16, 40, 55, 0.08);
+}
+
+.basic-info-row:last-child {
+    border-bottom: 0;
+}
+
+.basic-info-row span {
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
+.basic-info-row strong {
+    color: var(--heading);
+    text-align: right;
+    font-size: 1rem;
+}
+
 .stat-grid,
 .projects-grid,
 .skills-grid,
@@ -666,6 +697,15 @@ img {
     .info-grid,
     .stat-grid {
         grid-template-columns: 1fr;
+    }
+
+    .basic-info-row {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .basic-info-row strong {
+        text-align: left;
     }
 
     .hero-copy h1 {
