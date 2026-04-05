@@ -493,6 +493,23 @@ PROCUREMENT_POWERBI_PROJECT_ZH = {
     "time": "Power BI 项目",
     "tags": ["Power BI", "采购分析", "供应商绩效", "Dashboard"],
     "overview": "基于 Power BI 搭建采购经营分析仪表板，围绕采购执行、进度达成、降本结果与供应商绩效，形成面向管理层总览和明细追踪的双页分析视图。",
+    "kpis": [
+        {"title": "采购达成率", "subtitle": "Sourcing Attainment Rate"},
+        {"title": "准时定点率", "subtitle": "On-Time Sourcing Rate"},
+        {"title": "降本达成率", "subtitle": "Cost Achievement Rate"},
+        {"title": "年度降本金额", "subtitle": "Annual Saving Amount"},
+    ],
+    "slicers": ["Program", "Part Category", "Supplier Tier", "Risk Level", "Year-Month"],
+    "report_pages": [
+        {
+            "name": "Executive Overview",
+            "description": "面向管理层的总览页，集中展示采购执行进度、准时达成情况、降本指标与月度趋势变化。",
+        },
+        {
+            "name": "Supplier Performance & Detail",
+            "description": "面向业务追踪的明细页，围绕供应商准时交付、质量投诉、索赔金额和协同评分进行下钻分析。",
+        },
+    ],
     "business_problem": "采购管理既需要总览关键 KPI，也需要快速下钻到供应商、零件类别和项目维度。这个项目的目标是把分散的采购与供应商绩效数据统一到一套可筛选、可下钻、可复盘的管理驾驶舱里，支撑采购进度管理、降本复盘与供应商风险识别。",
     "tech_stack": ["Power BI", "Power Query", "DAX", "数据建模", "采购分析", "供应商绩效管理"],
     "methods": [

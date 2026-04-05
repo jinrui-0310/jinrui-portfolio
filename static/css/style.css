@@ -681,6 +681,103 @@ img {
     transform: translateX(3px);
 }
 
+.dashboard-hero .project-hero-inner,
+.dashboard-kpi-card,
+.dashboard-page-card,
+.dashboard-sidebar-card,
+.dashboard-chart-card {
+    background: linear-gradient(180deg, #ffffff, #f7fafd);
+}
+
+.dashboard-slicer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.1rem;
+}
+
+.dashboard-slicer {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+.dashboard-section {
+    padding-top: 0.5rem;
+}
+
+.dashboard-kpi-grid,
+.dashboard-page-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.dashboard-kpi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 1.2rem;
+}
+
+.dashboard-kpi-card,
+.dashboard-page-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    padding: 1.15rem 1.2rem;
+}
+
+.dashboard-kpi-card strong {
+    display: block;
+    color: var(--heading);
+    font-size: 1rem;
+}
+
+.dashboard-kpi-card span {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+.dashboard-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-page-card .eyebrow {
+    color: var(--primary);
+}
+
+.dashboard-page-card h2 {
+    margin: 0 0 0.5rem;
+    color: var(--heading);
+    font-size: 1.2rem;
+}
+
+.dashboard-page-card p:last-child {
+    margin: 0;
+    color: var(--text-soft);
+}
+
+.dashboard-detail-grid {
+    align-items: start;
+}
+
+.dashboard-sidebar-card .pill-list {
+    margin-top: 0.8rem;
+}
+
+.dashboard-chart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-chart-card .plotly-chart {
+    min-height: 320px;
+}
+
 .detail-grid {
     grid-template-columns: minmax(0, 1fr) 320px;
     align-items: start;
@@ -792,7 +889,10 @@ img {
     .footer-grid,
     .projects-grid,
     .skills-grid,
-    .education-grid {
+    .education-grid,
+    .dashboard-kpi-grid,
+    .dashboard-page-grid,
+    .dashboard-chart-grid {
         grid-template-columns: 1fr;
     }
 
@@ -877,5 +977,9 @@ img {
 
     .plotly-chart {
         min-height: 300px;
+    }
+
+    .dashboard-chart-card .plotly-chart {
+        min-height: 280px;
     }
 }
