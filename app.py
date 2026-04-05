@@ -358,11 +358,11 @@ CHINESE = {
         "相关能力": ["关系建模", "JOIN 与窗口函数", "KPI 报表分析", "跨部门数据协作", "数据洞察输出"],
     },
     "certificates": [
-        {"title": "certificate1.pdf", "url": "/static/files/certificates/certificate1.pdf"},
-        {"title": "certificate2.pdf", "url": "/static/files/certificates/certificate2.pdf"},
-        {"title": "certificate3.pdf", "url": "/static/files/certificates/certificate3.pdf"},
-        {"title": "certificate4.pdf", "url": "/static/files/certificates/certificate4.pdf"},
-        {"title": "certificate5.pdf", "url": "/static/files/certificates/certificate5.pdf"},
+        {"title_zh": "中级 SQL", "title_en": "Intermediate SQL", "url": "/static/files/certificates/certificate1.pdf", "image_url": "/static/images/certificates/certificate1.pdf.png"},
+        {"title_zh": "SQL 数据连接", "title_en": "Joining Data in SQL", "url": "/static/files/certificates/certificate2.pdf", "image_url": "/static/images/certificates/certificate2.pdf.png"},
+        {"title_zh": "Seaborn 数据可视化入门", "title_en": "Introduction to Data Visualization with Seaborn", "url": "/static/files/certificates/certificate3.pdf", "image_url": "/static/images/certificates/certificate3.pdf.png"},
+        {"title_zh": "Git 入门", "title_en": "Introduction to Git", "url": "/static/files/certificates/certificate4.pdf", "image_url": "/static/images/certificates/certificate4.pdf.png"},
+        {"title_zh": "pandas 数据处理", "title_en": "Data Manipulation with pandas", "url": "/static/files/certificates/certificate5.pdf", "image_url": "/static/images/certificates/certificate5.pdf.png"},
     ],
     "education": [
         {
