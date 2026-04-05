@@ -220,7 +220,7 @@ CHINESE = {
         "location": "美国德州，College Station",
         "phone": "+86 18571523696",
         "wechat": "18571523696",
-        "wechat_note": "备注：因时差，若电话无法接通，还请您添加微信，我会尽快回复，感谢。",
+        "wechat_note": "备注：因时差问题，电话可能无法接通，还请您添加微信，我会尽快回复，十分感谢。",
         "email": "jinrui@tamu.edu",
         "linkedin": "https://www.linkedin.com/in/jinrui-li-3a9924394",
         "github": "https://github.com/jinrui-0310",
