@@ -2,6 +2,11 @@
     <div class="container hero-grid">
         <div class="hero-copy reveal">
             <h1>{{ data.personal.preferred_name }}</h1>
+            <a class="profile-link" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+                <span class="profile-avatar">JL</span>
+                <span class="profile-name">{{ data.personal.preferred_name }}</span>
+                <span class="profile-badge">in</span>
+            </a>
             <p class="hero-text">求职方向：数据分析、商业分析、供应链分析</p>
         </div>
         <div class="hero-panel reveal delay-1">
