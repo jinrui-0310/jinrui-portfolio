@@ -402,6 +402,13 @@ img {
     font-weight: 600;
 }
 
+.basic-info-note strong {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+
 .stat-grid,
 .projects-grid,
 .skills-grid,
