@@ -329,7 +329,7 @@ CHINESE = {
     },
     "projects": [
         {
-            "title": "电动车采购与供应商绩效 Power BI 仪表板",
+            "title": "新能源汽车采购与供应商绩效 Power BI 仪表板",
             "time": "Power BI 项目",
             "summary": "围绕采购执行、降本达成与供应商绩效搭建双页 Power BI 仪表板，支持管理层总览与供应商明细分析。",
             "tags": ["Power BI", "采购分析", "供应商绩效"],
@@ -496,7 +496,7 @@ SALES_PROJECT_ZH = {
 
 
 PROCUREMENT_POWERBI_PROJECT_ZH = {
-    "title": "电动车采购与供应商绩效 Power BI 仪表板",
+    "title": "新能源汽车采购与供应商绩效 Power BI 仪表板",
     "time": "Power BI 项目",
     "tags": ["Power BI", "采购分析", "供应商绩效", "Dashboard"],
     "overview": "基于 Power BI 搭建采购经营分析仪表板，围绕采购执行、进度达成、降本结果与供应商绩效，形成面向管理层总览和明细追踪的双页分析视图。",
