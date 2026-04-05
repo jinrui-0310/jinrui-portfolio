@@ -501,6 +501,26 @@ img {
     align-items: baseline;
 }
 
+.education-school {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.education-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface-muted);
+    color: var(--heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
 .education-row + .education-row {
     margin-top: 0.45rem;
 }

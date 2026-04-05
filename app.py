@@ -292,7 +292,8 @@ CHINESE = {
     },
     "education": [
         {
-            "school": "德州农工大学（QS前150）",
+            "school": "德州农工大学",
+            "school_tag": "QS前150",
             "degree": "计量经济学硕士",
             "dates": "2025/01 - 2026/12（预计）",
             "location": "美国，大学城",
@@ -300,7 +301,8 @@ CHINESE = {
             "coursework": "相关课程：数据挖掘、回归分析、数据库与大数据、金融数据分析、经济预测",
         },
         {
-            "school": "武汉理工大学（211工程）",
+            "school": "武汉理工大学",
+            "school_tag": "211工程",
             "degree": "物流管理学士",
             "dates": "2017/09 - 2021/06",
             "location": "中国，武汉",
