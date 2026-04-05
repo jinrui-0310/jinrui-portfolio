@@ -1,20 +1,11 @@
 <section class="hero-section" id="home">
     <div class="container hero-grid">
         <div class="hero-copy reveal">
-            <p class="eyebrow">{{ data.hero.eyebrow }}</p>
             <h1>{{ data.personal.preferred_name }}</h1>
-            <div class="tag-list">
-                {% for item in data.personal.headline.split(' | ') %}
-                <span>{{ item }}</span>
-                {% endfor %}
-            </div>
+            <p class="hero-text">求职方向：数据分析、商业分析、供应链分析</p>
         </div>
         <div class="hero-panel reveal delay-1">
             <div class="basic-info-card">
-                <div class="basic-info-row">
-                    <span>求职方向</span>
-                    <strong>数据分析 / 商业分析 / 供应链分析</strong>
-                </div>
                 <div class="basic-info-row">
                     <span>所在地</span>
                     <strong>{{ data.personal.location }}</strong>
