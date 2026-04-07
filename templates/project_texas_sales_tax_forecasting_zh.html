@@ -1,0 +1,121 @@
+{% extends "base_zh.html" %}
+{% block content %}
+<section class="project-hero dashboard-hero procurement-project-hero">
+    <div class="container project-hero-inner reveal">
+        <a class="back-link" href="/zh/projects">返回项目列表</a>
+        <h1>{{ project.title }}</h1>
+        <div class="project-meta">
+            <span>{{ project.time }}</span>
+            {% for tag in project.tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container detail-grid dashboard-detail-grid">
+        <div class="detail-main">
+            <article class="detail-card reveal">
+                <h2>项目概述</h2>
+                <p>{{ project.overview }}</p>
+                <p class="project-section-note">{{ project.process_summary }}</p>
+            </article>
+            <article class="detail-card reveal">
+                <h2>业务问题</h2>
+                <ul class="achievement-list">
+                    {% for item in project.business_questions %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="detail-card reveal">
+                <h2>数据来源</h2>
+                <ul class="achievement-list">
+                    {% for item in project.data_sources %}
+                    <li><code>{{ item.name }}</code>：{{ item.description }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="detail-card reveal">
+                <h2>分析过程 / 方法</h2>
+                <ul class="achievement-list">
+                    {% for item in project.methods %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="detail-card reveal">
+                <h2>结果与发现</h2>
+                <ul class="achievement-list">
+                    {% for item in project.results %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="detail-card reveal">
+                <h2>项目亮点</h2>
+                <ul class="achievement-list">
+                    {% for item in project.project_highlights %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </div>
+        <aside class="detail-sidebar reveal delay-1">
+            <div class="detail-card sticky-card dashboard-sidebar-card">
+                <h3>技术栈</h3>
+                <div class="pill-list">
+                    {% for item in project.tech_stack %}
+                    <span>{{ item }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="content-section muted-section dashboard-chart-section">
+    <div class="container">
+        <div class="section-heading reveal">
+            <div class="section-heading-line">
+                <p class="eyebrow">{{ project.output_intro }}</p>
+            </div>
+            <p>{{ project.output_note }}</p>
+        </div>
+        <div class="promotion-dashboard-sections">
+            {% for item in project.output_sections %}
+            <article class="chart-card reveal promotion-dashboard-card">
+                <div class="chart-header">
+                    <h3>{{ item.title }}</h3>
+                </div>
+                <div class="promotion-dashboard-copy">
+                    <div class="promotion-dashboard-block">
+                        <p class="eyebrow promotion-dashboard-label">说明</p>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div class="promotion-dashboard-block">
+                        <p class="eyebrow promotion-dashboard-label">图表展示</p>
+                        <a class="dashboard-image-link" href="{{ item.image_url }}" target="_blank" rel="noopener noreferrer">
+                            <img class="dashboard-image" src="{{ item.image_url }}" alt="{{ item.alt }}">
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <article class="detail-card reveal">
+            <h2>项目总结</h2>
+            <p>{{ project.summary }}</p>
+        </article>
+        <div class="detail-footer-action">
+            <a class="button button-secondary" href="/zh/projects">返回项目列表</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

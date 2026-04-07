@@ -1,0 +1,152 @@
+{% extends "base_zh.html" %}
+{% block content %}
+<section class="project-hero dashboard-hero promotion-project-hero">
+    <div class="container project-hero-inner reveal">
+        <a class="back-link" href="/zh/projects">返回项目列表</a>
+        <h1>{{ project.title }}</h1>
+        <div class="project-meta">
+            <span>{{ project.time }}</span>
+            {% for tag in project.tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container detail-grid dashboard-detail-grid">
+        <div class="detail-main">
+            <article class="detail-card reveal">
+                <h2>项目概述</h2>
+                <p>{{ project.overview }}</p>
+                <p class="project-section-note">{{ project.process_summary }}</p>
+            </article>
+            <article class="detail-card reveal">
+                <h2>业务问题</h2>
+                <ul class="achievement-list">
+                    {% for item in project.business_questions %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="detail-card reveal">
+                <h2>数据来源</h2>
+                <ul class="achievement-list">
+                    {% for item in project.data_sources %}
+                    <li><code>{{ item.name }}</code>：{{ item.description }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="project-section-note">{{ project.data_sources_note }}</p>
+            </article>
+            <article class="detail-card reveal">
+                <h2>数据提取与清洗</h2>
+                <ul class="achievement-list">
+                    {% for item in project.data_work %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="project-section-note">最终导出的分析表包括：</p>
+                {% for table in project.analysis_tables %}
+                <div class="promotion-subsection">
+                    <table class="project-data-table">
+                        <tbody>
+                            <tr>
+                                <th>{{ loop.index }}. 分析表</th>
+                                <td><code>{{ table.name }}</code></td>
+                            </tr>
+                            <tr>
+                                <th>用途</th>
+                                <td>{{ table.description }}</td>
+                            </tr>
+                            <tr>
+                                <th>主要字段</th>
+                                <td class="table-field-cell">
+                                    {% for field in table.fields %}
+                                    <code>{{ field }}</code>{% if not loop.last %}、{% endif %}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </article>
+        </div>
+        <aside class="detail-sidebar reveal delay-1">
+            <div class="detail-card sticky-card dashboard-sidebar-card">
+                <h3>技术栈</h3>
+                <div class="pill-list">
+                    {% for item in project.tech_stack %}
+                    <span>{{ item }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="content-section muted-section dashboard-chart-section">
+    <div class="container">
+        <div class="section-heading reveal">
+            <div class="section-heading-line">
+                <p class="eyebrow">{{ project.dashboard_intro }}</p>
+            </div>
+        </div>
+        <div class="promotion-dashboard-sections">
+            {% for dashboard in project.dashboard_sections %}
+            <article class="chart-card reveal promotion-dashboard-card">
+                <div class="chart-header">
+                    <h3>{{ dashboard.title }}</h3>
+                </div>
+                <div class="promotion-dashboard-copy">
+                    <div class="promotion-dashboard-block">
+                        <p class="eyebrow promotion-dashboard-label">主要内容</p>
+                        <p>{{ dashboard.question }}</p>
+                    </div>
+                    <div class="promotion-dashboard-block">
+                        <p class="eyebrow promotion-dashboard-label">Dashboard 展示</p>
+                        <a class="dashboard-image-link" href="{{ dashboard.image_url }}" target="_blank" rel="noopener noreferrer">
+                            <img class="dashboard-image" src="{{ dashboard.image_url }}" alt="{{ dashboard.alt }}">
+                        </a>
+                    </div>
+                    <div class="promotion-dashboard-block">
+                        <p class="eyebrow promotion-dashboard-label">核心发现</p>
+                        <ul class="achievement-list">
+                            {% for item in dashboard.findings %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <article class="detail-card reveal">
+            <h2>项目总结</h2>
+            <p>{{ project.summary }}</p>
+            <p class="project-section-note">如果后续继续完善，我会考虑补充：</p>
+            <ul class="achievement-list">
+                {% for item in project.next_steps %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        <article class="detail-card reveal">
+            <h2>文件说明</h2>
+            <ul class="achievement-list">
+                {% for item in project.file_notes %}
+                <li><code>{{ item.name }}</code>：{{ item.description }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        <div class="detail-footer-action">
+            <a class="button button-secondary" href="/zh/projects">返回项目列表</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

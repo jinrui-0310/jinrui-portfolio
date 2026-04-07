@@ -1,42 +1,51 @@
 <section class="hero-section" id="home">
     <div class="container hero-grid">
         <div class="hero-copy reveal">
-            <p class="eyebrow">{{ data.hero.eyebrow }}</p>
-            <h1>{{ data.personal.preferred_name }}</h1>
-            <h2>{{ data.hero.title }}</h2>
-            <p class="hero-text">{{ data.hero.intro }}</p>
-            <div class="tag-list">
-                {% for item in data.personal.headline.split(' | ') %}
-                <span>{{ item }}</span>
-                {% endfor %}
+            <div class="hero-header-row">
+                <div class="hero-name-wrap">
+                <h1>{{ data.personal.preferred_name }}</h1>
+                </div>
+                <div class="hero-meta-row">
+                <a class="hero-linkedin-badge" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+                    <span class="profile-badge">in</span>
+                </a>
+                <p class="hero-section-label">About</p>
+                </div>
             </div>
-            <div class="button-row">
-                <a class="button button-primary" href="{{ data.personal.resume_url }}" target="_blank" rel="noopener noreferrer">Resume</a>
-                <a class="button button-secondary" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="button button-secondary" href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="button button-ghost" href="/#contact">Contact</a>
-            </div>
-            <p class="helper-text">{{ data.hero.helper }}</p>
+            <p class="hero-text">{{ data.hero.eyebrow }}</p>
+            <h2 class="hero-about-title">{{ data.about.title }}</h2>
+            <p class="hero-summary">{{ data.about.body }}</p>
         </div>
         <div class="hero-panel reveal delay-1">
-            <div class="stat-card">
-                <span class="stat-label">{{ data.personal.headline }}</span>
-                <strong>{{ data.personal.location }}</strong>
-            </div>
-            <div class="stat-grid">
-                {% for stat in data.hero.stats %}
-                <article class="stat-card">
-                    <span class="stat-value">{{ stat.value }}</span>
-                    <span class="stat-label">{{ stat.label }}</span>
-                </article>
-                {% endfor %}
+            <div class="basic-info-card">
+                <div class="basic-info-row">
+                    <span><span class="info-icon" aria-hidden="true">⌂</span>Location</span>
+                    <strong>{{ data.personal.location }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span><span class="info-icon" aria-hidden="true">✉</span>Email</span>
+                    <strong>{{ data.personal.email }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span><span class="info-icon" aria-hidden="true">✆</span>Phone</span>
+                    <strong>{{ data.personal.phone }}</strong>
+                </div>
+                <div class="basic-info-row">
+                    <span><span class="info-icon" aria-hidden="true">⌘</span>Focus</span>
+                    <strong>{{ data.about.info[3].value }}</strong>
+                </div>
+                <div class="basic-info-row basic-info-note">
+                    <span><span class="info-icon" aria-hidden="true">!</span>Note</span>
+                    <strong>{{ data.hero.helper }}</strong>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<section class="content-section" id="about"><div class="container two-column"><div class="section-heading reveal"><p class="eyebrow">About</p><h2>{{ data.about.title }}</h2></div><div class="section-copy reveal delay-1"><p>{{ data.about.body }}</p><div class="info-grid">{% for item in data.about.info %}<div class="info-item"><span>{{ item.label }}</span><strong>{{ item.value }}</strong></div>{% endfor %}</div></div></div></section>
-<section class="content-section muted-section" id="experience"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Experience</p><h2>{{ data.experience.title }}</h2></div>{% for item in data.experience["items"] %}<article class="timeline-card reveal delay-1"><div class="timeline-header"><div><h3>{{ item.title }}</h3><p class="timeline-company">{{ item.company }}</p></div><div class="timeline-meta"><span>{{ item.dates }}</span><span>{{ item.location }}</span></div></div><ul class="achievement-list">{% for bullet in item.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul></article>{% endfor %}</div></section>
-<section class="content-section" id="projects"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Projects</p><h2>Selected work in forecasting and business analytics.</h2></div><div class="projects-grid">{% for project in data.projects %}<article class="project-card reveal"><div class="project-topline"><span>{{ project.time }}</span><div class="tag-list compact">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div></div><h3>{{ project.title }}</h3><p>{{ project.summary }}</p><a class="button button-primary" href="{{ project.url }}">View Project</a></article>{% endfor %}</div><div class="section-action"><a class="button button-secondary" href="/projects">Projects</a></div></div></section>
-<section class="content-section muted-section" id="skills"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Skills</p><h2>Analytical toolkit built for data cleaning, modeling, and reporting.</h2></div><div class="skills-grid">{% for category, items in data.skills.items() %}<article class="skill-card reveal"><h3>{{ category }}</h3><div class="pill-list">{% for item in items %}<span>{{ item }}</span>{% endfor %}</div></article>{% endfor %}</div></div></section>
-<section class="content-section" id="education"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Education</p><h2>Academic foundation in economics, logistics, and applied analysis.</h2></div><div class="education-grid">{% for item in data.education %}<article class="education-card reveal"><h3>{{ item.school }}</h3><p class="degree">{{ item.degree }}</p><p>{{ item.dates }}</p><p>{{ item.location }}</p><p class="education-details">{{ item.details }}</p></article>{% endfor %}</div></div></section>
-<section class="content-section accent-section" id="contact"><div class="container contact-panel reveal"><div><p class="eyebrow">Contact</p><h2>Let's connect about analytics, forecasting, and BI opportunities.</h2><p>I am interested in data analytics, business intelligence, forecasting, and supply chain analytics roles.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:{{ data.personal.email }}">Email Me</a><a class="button button-secondary" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button button-secondary" href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer">GitHub</a><a class="button button-ghost" href="{{ data.personal.resume_url }}" target="_blank" rel="noopener noreferrer">Resume</a></div><div class="contact-details"><span>{{ data.personal.email }}</span><span>{{ data.personal.phone }}</span><span>{{ data.personal.location }}</span></div></div></section>
+<section class="content-section" id="about"><div class="container"></div></section>
+<section class="content-section" id="education"><div class="container"><div class="section-heading reveal"><div class="section-heading-line"><p class="eyebrow">Education</p><p class="section-subtitle">A background in economics and logistics that supports applied analytics and supply chain problem solving.</p></div></div><div class="education-grid">{% for item in data.education %}<article class="education-card reveal"><div class="education-row"><div class="education-school"><h3>{{ item.school }}</h3>{% if item.school_tag %}<span class="education-badge">{{ item.school_tag }}</span>{% endif %}</div><p class="education-meta">{{ item.location }}</p></div><div class="education-row"><p class="degree">{{ item.degree }}</p><p class="education-meta">{{ item.dates }}</p></div>{% if item.gpa %}<p class="education-details">{{ item.gpa }}</p>{% endif %}{% if item.coursework %}<p class="education-details">{{ item.coursework }}</p>{% endif %}{% if item.honors %}<p class="education-details">{{ item.honors }}</p>{% endif %}</article>{% endfor %}</div></div></section>
+<section class="content-section muted-section" id="experience"><div class="container"><div class="section-heading reveal"><div class="section-heading-line"><p class="eyebrow">Experience</p><p class="section-subtitle">{{ data.experience.title }}</p></div></div>{% for item in data.experience["items"] %}<article class="timeline-card reveal delay-1"><div class="timeline-header"><div><h3>{{ item.title }}</h3>{% if item.company_url %}<p class="timeline-company"><a href="{{ item.company_url }}" target="_blank" rel="noopener noreferrer">{{ item.company }}</a></p>{% else %}<p class="timeline-company">{{ item.company }}</p>{% endif %}</div><div class="timeline-meta"><span>{{ item.dates }}</span><span>{{ item.location }}</span></div></div><ul class="achievement-list">{% for bullet in item.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul></article>{% endfor %}</div></section>
+<section class="content-section" id="projects"><div class="container"><div class="section-heading reveal"><div class="section-heading-line"><p class="eyebrow">Projects</p><p class="section-subtitle">Selected projects that highlight forecasting, business analytics, and dashboard design.</p></div></div><div class="projects-grid">{% for project in data.projects %}<article class="project-card reveal"><div class="project-topline"><span>{{ project.time }}</span><div class="tag-list compact">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div></div><h3>{{ project.title }}</h3><p>{{ project.summary }}</p><a class="button button-primary" href="{{ project.url }}">View Project</a></article>{% endfor %}</div><div class="section-action"><a class="project-list-link" href="/projects"><span>Project List</span><span class="project-list-arrow">→</span></a></div></div></section>
+<section class="content-section muted-section" id="skills"><div class="container"><div class="section-heading reveal"><div class="section-heading-line"><p class="eyebrow">Skills</p><p class="section-subtitle">A toolkit that covers data cleaning, modeling, visualization, and business analysis workflows.</p></div></div><div class="skills-grid">{% for category, items in data.skills.items() %}<article class="skill-card reveal"><h3>{{ category }}</h3><div class="pill-list">{% for item in items %}<span>{{ item }}</span>{% endfor %}</div></article>{% endfor %}</div></div></section>
+<section class="content-section" id="certificates"><div class="container"><div class="section-heading reveal"><div class="section-heading-line"><p class="eyebrow">Certificates</p><p class="section-subtitle">The certificates below can be opened directly as original PDF files.</p></div></div><div class="certificate-grid">{% for item in data.certificates %}<article class="certificate-card reveal"><a class="certificate-preview" href="{{ item.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ item.image_url }}" alt="{{ item.title_en }} certificate preview"></a><div class="certificate-copy"><h3>{{ item.title_en }}</h3><p>{{ item.title_zh }}</p><a class="certificate-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">View Certificate</a></div></article>{% endfor %}</div></div></section>
+<section class="content-section accent-section" id="contact"><div class="container contact-panel reveal"><div><p class="eyebrow contact-label">Contact</p><h2>I’m currently exploring opportunities in data analytics, business analytics, and supply chain analytics.</h2></div><div class="contact-actions"><a class="button button-primary" href="mailto:{{ data.personal.email }}">Email Me</a><a class="button button-secondary" href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button button-secondary" href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer">GitHub</a><a class="button button-ghost" href="{{ data.personal.resume_url }}" target="_blank" rel="noopener noreferrer">English Resume</a><a class="button button-ghost" href="{{ data.personal.resume_zh_url }}" target="_blank" rel="noopener noreferrer">Chinese Resume</a></div></div></section>
